@@ -1,0 +1,232 @@
+* {
+  padding: 0;
+  margin: 0;
+  font-family: Open Sans;
+}
+.container {
+  position: absolute;
+  z-index: 1
+	top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  background-image: linear-gradient(135deg, #FFF6B7 10%, #F6416C 100%);
+}
+.container ul li {
+  z-index: 5;
+  list-style: none;
+  position: absolute;
+  bottom: -160px;
+  width: 40px;
+  height: 40px;
+  background-color: rgba(255, 255, 255, 0.15);
+  animation: square 25s infinite;
+  transition-timing-function: linear;
+}
+.container ul li:nth-child(1) {
+  left: 10%;
+}
+.container ul li:nth-child(2) {
+  left: 20%;
+  width: 90px;
+  height: 90px;
+  animation-delay: 2s;
+  animation-duration: 17s;
+}
+.container ul li:nth-child(3) {
+  left: 25%;
+  animation-delay: 4s;
+}
+.container ul li:nth-child(4) {
+  left: 40%;
+  width: 60px;
+  height: 60px;
+  animation-duration: 22s;
+  background-color: rgba(255, 255, 255, 0.3);
+}
+.container ul li:nth-child(5) {
+  left: 70%;
+}
+.container ul li:nth-child(6) {
+  left: 80%;
+  width: 120px;
+  height: 120px;
+  animation-delay: 3s;
+  background-color: rgba(255, 255, 255, 0.2);
+}
+.container ul li:nth-child(7) {
+  left: 32%;
+  width: 160px;
+  height: 160px;
+  animation-delay: 2s;
+}
+.container ul li:nth-child(8) {
+  left: 55%;
+  width: 20px;
+  height: 20px;
+  animation-delay: 4s;
+  animation-duration: 25s;
+}
+.container ul li:nth-child(9) {
+  left: 25%;
+  width: 10px;
+  height: 10px;
+  animation-delay: 2s;
+  animation-duration: 22s;
+  background-color: rgba(255, 255, 255, 0.3);
+}
+.container ul li:nth-child(10) {
+  left: 85%;
+  width: 160px;
+  height: 160px;
+  animation-delay: 5s;
+}
+@keyframes square {
+  0% {
+    transform: translateY(0px);
+  }
+  100% {
+    transform: translateY(-700px) rotate(600deg);
+  }
+}
+.container-content {
+  text-align: center;
+}
+.container-body {
+  z-index: 10;
+  position: absolute;
+  width: 350px;
+  left: 50%;
+  margin-left: -175px;
+}
+.container-body .top-font {
+  text-align: center;
+  font-size: 24px;
+  margin-top: 100px;
+  color: #FCE0E0;
+}
+.container-body .login-box {
+  text-align: center;
+  margin-top: 70px;
+}
+.container-body .login-box .login-content {
+  text-align: center;
+}
+.container-body .login-box .login-content .username input,
+.container-body .login-box .login-content .password input {
+  width: 350px;
+  height: 50px;
+  border: 1px solid #FF7D7D;
+  border-radius: 4px;
+  opacity: 0.3;
+  text-align: center;
+  font-size: 18px;
+  color: #000000;
+  box-sizing: border-box;
+}
+.container-body .login-box .login-content .username input:focus,
+.container-body .login-box .login-content .password input:focus {
+  outline: none;
+}
+.container-body .login-box .login-content .password {
+  margin-top: 20px;
+}
+.container-body .login-box .login-button {
+  margin-top: 60px;
+}
+.container-body .login-box .login-button button {
+  border: none;
+  width: 350px;
+  height: 50px;
+  background-color: #F65C68;
+  border-radius: 4px;
+  font-size: 18px;
+  color: #ffffff;
+  cursor: pointer;
+}
+.container-body .login-box .login-button button:focus {
+  outline: none;
+}
+.container-body .register-font p {
+  float: right;
+  color: #ffffff;
+  margin-top: 10px;
+  color: #FCE0E0;
+  cursor: pointer;
+  width: 100px;
+}
+.overlay {
+  display: none;
+  position: absolute;
+  top: 0%;
+  left: 0%;
+  width: 100%;
+  height: 100%;
+  background-color: black;
+  z-index: 20;
+  opacity: 0.2;
+}
+.register-box {
+  display: none;
+  position: absolute;
+  top: 10%;
+  left: 50%;
+  width: 500px;
+  margin-left: -250px;
+  height: 80%;
+  border: 16px solid #FCE0E0;
+  box-sizing: border-box;
+  background-color: white;
+  z-index: 21;
+  overflow: auto;
+}
+.register-box .close-box {
+  background-image: url("../images/close_icon.png");
+  background-size: 40px 40px;
+  background-repeat: no-repeat;
+  position: absolute;
+  right: 0px;
+  height: 40px;
+  width: 40px;
+  cursor: pointer;
+}
+.register-box .register-content {
+  padding: 30px;
+  text-align: center;
+}
+.register-box .register-content .register-username input,
+.register-box .register-content .register-password input,
+.register-box .register-content .register-repassword input {
+  border-width: 0 0 2px 0;
+  height: 30px;
+  width: 350px;
+  font-size: 20px;
+  padding-left: 5px;
+}
+.register-box .register-content .register-username input {
+  margin-top: 40px;
+}
+.register-box .register-content .register-password input,
+.register-box .register-content .register-repassword input {
+  margin-top: 60px;
+}
+.register-box .register-content .register-username input:focus,
+.register-box .register-content .register-password input:focus,
+.register-box .register-content .register-repassword input:focus,
+.register-box .register-content .register-button button:focus {
+  outline: none;
+}
+.register-box .register-content .register-button button {
+  margin-top: 80px;
+  width: 250px;
+  height: 45px;
+  background-color: #F16C6C;
+  box-sizing: border-box;
+  border: none;
+  color: #ffffff;
+  font-size: 16px;
+}
+.register-box .register-content .register-button button:hover {
+  background-color: #F74747;
+}
